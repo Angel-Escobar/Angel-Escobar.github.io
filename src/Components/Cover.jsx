@@ -26,6 +26,11 @@ const Cover = () => {
     border-color: white;
   `;
 
+  const ImagenPerfil = styled.img`
+    max-width: 100%; /* Asegura que la imagen no se extienda más allá de su contenedor */
+    height: auto; /* Hace que la altura de la imagen sea proporcional a su ancho */
+  `;
+
   return (
     <Container className="container-fluid text-white">
       <ContenedorGeneral className='row vh-100 justify-content-around align-items-center'>
@@ -53,8 +58,9 @@ const Cover = () => {
             Proyectos
           </BotonProyectos>
         </div>
-        <div className='col-sm-10 col-md-4 img-fluid'>
-          <img className='img-fluid rounded-circle'
+        <div className='col-sm-12 col-md-4'>
+          <ImagenPerfil
+            className='img-fluid rounded-circle'
             src={Perfil}
             alt='Imagen de desarrollador'
           />
