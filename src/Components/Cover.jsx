@@ -1,12 +1,11 @@
 import React from 'react';
 import Typewriter from "typewriter-effect";
-import Perfil from '../assets/IMG_5255.jpg';
+import Perfil from '../assets/perfil.jpg';
 import styled from 'styled-components';
 
 const Cover = () => {
   const Container = styled.div`
     background-color: black;
-    height: 100vh;
   `;
 
   const Titulo1 = styled.h1`
