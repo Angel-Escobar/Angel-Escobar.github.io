@@ -29,16 +29,16 @@ const Navbar = () => {
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-end`} id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link" href="#" onClick={handleNavCollapse}>Inicio <span className="sr-only">(current)</span></a>
+                <a className="nav-link" href="#" onClick={handleNavCollapse}>Sobre Mi <span className="sr-only">(current)</span></a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" onClick={handleNavCollapse}>Acerca de</a>
+                <a className="nav-link" href="#" onClick={handleNavCollapse}>Habilidades</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" onClick={handleNavCollapse}>Servicios</a>
+                <a className="nav-link" href="#" onClick={handleNavCollapse}>Proyectos</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" onClick={handleNavCollapse}>Contacto</a>
+                <a className="nav-link" href="#" onClick={handleNavCollapse}>Contactame</a>
               </li>
             </ul>
           </div>
