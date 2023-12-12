@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-light py-3">
       <Container className="text-center">
-        <p className="mb-0">&copy; 2023 Nombre de tu Empresa. Todos los derechos reservados.</p>
+        <p className="mb-0">&copy; 2023 Agencia Crece Digital. Todos los derechos reservados.</p>
       </Container>
     </footer>
   );
