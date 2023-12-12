@@ -29,10 +29,10 @@ const Portafolio = () => {
   `;
 
   const cardsData = [
-    { id: 1, title: 'Card 1', text: 'Description for Card 1', imageSrc: 'https://via.placeholder.com/150?text=Card+1' },
-    { id: 2, title: 'Card 2', text: 'Description for Card 2', imageSrc: 'https://via.placeholder.com/150?text=Card+2' },
-    { id: 3, title: 'Card 3', text: 'Description for Card 3', imageSrc: 'https://via.placeholder.com/150?text=Card+3' },
-    { id: 4, title: 'Card 4', text: 'Description for Card 4', imageSrc: 'https://via.placeholder.com/150?text=Card+4' },
+    { id: 1, title: 'Card 1', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+1' },
+    { id: 2, title: 'Card 2', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+2' },
+    { id: 3, title: 'Card 3', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+3' },
+    { id: 4, title: 'Card 4', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+4' },
   ];
 
   return (
@@ -63,7 +63,7 @@ const Portafolio = () => {
           {selectedCard && (
             <>
               <p>{selectedCard.text}</p>
-              <img src={selectedCard.imageSrc} alt={selectedCard.title} />
+             
               {/* Agrega aquí cualquier otra información adicional que desees mostrar en el modal */}
             </>
           )}
