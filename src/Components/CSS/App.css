@@ -1,0 +1,6 @@
+.contenedor {
+    background-image: url('/src/assets/blurred.jpg');
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+  }
+  

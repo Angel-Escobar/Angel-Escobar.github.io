@@ -1,15 +1,12 @@
 import React from 'react';
 import Typewriter from "typewriter-effect";
-import Perfil from '../assets/perfil.jpg';
+import Perfil from '../assets/perfil.png';
 import styled from 'styled-components';
 
 const Cover = () => {
-  const Container = styled.div`
-    background-color: black;
-  `;
 
   const Titulo1 = styled.h1`
-    color: #0B5ED7;
+    color: #242E66;
   `;
 
   const JustifiedParagraph = styled.p`
@@ -17,47 +14,65 @@ const Cover = () => {
   `;
 
   const ContenedorGeneral = styled.div`
-    margin-top: 50px;
+    height: 95vh;
   `;
 
-  const BotonProyectos = styled.button`
+  const BotonServicios = styled.button`
     background-color: transparent;
-    border-color: white;
+    border-color: #FD6003;
+    color: #242E66;
+    &:hover{
+      color: white;
+      background-color: #FD6003;
+    }
   `;
-
+  const BotontContacto = styled.button`
+    background-color: #242E66;
+    color: white;
+    &:hover{
+      background-color:transparent;
+      border-color:  #242E66;
+    }
+  `
   const ImagenPerfil = styled.img`
     max-width: 100%; /* Asegura que la imagen no se extienda más allá de su contenedor */
     height: auto; /* Hace que la altura de la imagen sea proporcional a su ancho */
   `;
 
+  const OrangeText = styled.h2`
+    color: #FD6003;
+  `
+
   return (
-    <Container className="container-fluid text-white">
-      <ContenedorGeneral className='row vh-100 justify-content-around align-items-center'>
-        <div className='col-sm-12 col-md-6 my-auto text-start fw-bold'>
-          <h4>Hola soy Angel Escobar</h4>
-          <Titulo1 className='mt-2'>
+    <div className="container-fluid">
+      <ContenedorGeneral className='row justify-content-around align-items-center'>
+        <div className='col-sm-12 col-md-5 my-auto text-start fw-bold'>
+          <OrangeText className='fs-2'>TU AGENCIA DIGITAL</OrangeText>
+          <Titulo1 className=' display-3 fw-bold'>
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Disenador UX/UI")
+                  .typeString("Marketing Digital")
                   .pauseFor(800)
                   .deleteAll()
-                  .typeString("Desarrollador Web")
+                  .typeString("Edición de Video")
+                  .pauseFor(800)
+                  .deleteAll()
+                  .typeString("Social Media")
                   .start();
+                  autoStart: true
               }}
             />
           </Titulo1>
-          <JustifiedParagraph className='mt-4 text-justify'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, maiores? Quibusdam voluptates
-            necessitatibus provident! Maiores velit ab quod, quos saepe doloribus labore officia qui sed
-            laudantium necessitatibus suscipit repudiandae enim.
+          <JustifiedParagraph className='mt-4 text-justify text-muted h6 fw-light'>
+          Diseñamos estrategias personalizadas que abarcan desde la optimización de motores de búsqueda hasta campañas publicitarias en redes sociales. Impulsamos tu visibilidad online y te ayudamos a conectar con tu público objetivo de manera impactante.
           </JustifiedParagraph>
-          <button className='rounded-pill fw-bold btn btn-primary mt-3'>Contactarme</button>
-          <BotonProyectos className='rounded-pill fw-bold btn btn-primary mt-3 ms-2'>
+          <BotontContacto className='rounded-pill btn-lg  btn mt-3'>Contactarme</BotontContacto>
+          <BotonServicios className='rounded-pill btn  btn-lg mt-3 ms-2'>
             Proyectos
-          </BotonProyectos>
+          </BotonServicios>
         </div>
-        <div className='col-sm-12 col-md-4'>
+        <div className='col-sm-12 col-md-5'>
           <ImagenPerfil
             className='img-fluid rounded-circle'
             src={Perfil}
@@ -65,7 +80,7 @@ const Cover = () => {
           />
         </div>
       </ContenedorGeneral>
-    </Container>
+    </div>
   );
 };
 

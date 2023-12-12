@@ -6,12 +6,9 @@ const Navbar = () => {
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
-  const BarraOscura = styled.div`
-  background-color: black;
-  `
   return (
     <div className='container'>
-      <BarraOscura className="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div className="container navbar navbar-expand-lg ">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Logo</a>
           <button
@@ -29,13 +26,13 @@ const Navbar = () => {
           <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-end`} id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link" href="#" onClick={handleNavCollapse}>Sobre Mi <span className="sr-only">(current)</span></a>
+                <a className="nav-link" href="#" onClick={handleNavCollapse}>Inicio</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" onClick={handleNavCollapse}>Habilidades</a>
+                <a className="nav-link" href="#" onClick={handleNavCollapse}>Portafolio</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" onClick={handleNavCollapse}>Proyectos</a>
+                <a className="nav-link" href="#" onClick={handleNavCollapse}>Servicios</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#" onClick={handleNavCollapse}>Contactame</a>
@@ -43,7 +40,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </BarraOscura>
+      </div>
     </div>
   );
 };
