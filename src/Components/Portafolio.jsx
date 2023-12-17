@@ -29,13 +29,14 @@ const Portafolio = () => {
     text-align: center;
     margin-bottom: 20px;
     cursor: pointer;
+    width: 100%; /* Establece el ancho fijo para cada card */
   `;
 
   const cardsData = [
     { id: 1, title: 'Imágenes Publicitarias', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+1' },
     { id: 2, title: 'Producción de Video', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+2' },
     { id: 3, title: 'Fotografía Profesional', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+3' },
-    { id: 4, title: 'Campañanas Publicitarias ', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+4' },
+    { id: 4, title: 'Campañas Publicitarias ', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+4' },
   ];
 
   return (
