@@ -33,8 +33,12 @@ const Portafolio = () => {
   `;
 
   const cardsData = [
-    { id: 1, title: 'Imágenes Publicitarias', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+1' },
-    { id: 2, title: 'Producción de Video', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+2' },
+    { id: 1, title: 'Imágenes Publicitarias', 
+    text: 'Una forma rápida de impactar a tu audiencia', 
+    imageSrc: 'https://via.placeholder.com/150?text=Card+1' },
+
+    
+    { id: 2, title: 'Producción de Video', text: 'La gente no conoce tu negocio como tú.', imageSrc: 'https://via.placeholder.com/150?text=Card+2' },
     { id: 3, title: 'Fotografía Profesional', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+3' },
     { id: 4, title: 'Campañas Publicitarias ', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+4' },
   ];
@@ -80,7 +84,7 @@ const Portafolio = () => {
         <Modal.Body>
           {selectedCard && (
             <>
-              <p>{selectedCard.text}</p>
+              
               {/* Agrega aquí cualquier otra información adicional que desees mostrar en el modal */}
             </>
           )}
