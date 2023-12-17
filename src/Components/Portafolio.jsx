@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col, Card, Modal } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { Container, Row, Col, Modal } from 'react-bootstrap';
+import { Carousel } from 'react-responsive-carousel';
+import { BsArrowRightShort } from 'react-icons/bs';
+
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Portafolio = () => {
   const [showModal, setShowModal] = useState(false);
@@ -17,7 +20,7 @@ const Portafolio = () => {
     setSelectedCard(null);
   };
 
-  const CardInfo = styled(motion.div)`
+  const CardInfo = styled.div`
     background-color: white;
     color: black;
     padding: 20px;
@@ -29,31 +32,45 @@ const Portafolio = () => {
   `;
 
   const cardsData = [
-    { id: 1, title: 'Card 1', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+1' },
-    { id: 2, title: 'Card 2', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+2' },
-    { id: 3, title: 'Card 3', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+3' },
-    { id: 4, title: 'Card 4', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+4' },
+    { id: 1, title: 'Imágenes Publicitarias', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+1' },
+    { id: 2, title: 'Producción de Video', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+2' },
+    { id: 3, title: 'Fotografía Profesional', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+3' },
+    { id: 4, title: 'Campañanas Publicitarias ', text: 'Descripcion', imageSrc: 'https://via.placeholder.com/150?text=Card+4' },
   ];
 
   return (
     <Container className="w-75">
       <h1 className='text-center mb-4'>Soluciones Digitales a la Medida</h1>
-      <Row xs={1} sm={2} md={2} lg={4} className="g-4">
+      <Row className="d-none d-sm-flex">
         {cardsData.map((card) => (
           <Col key={card.id}>
             <CardInfo
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
               onClick={() => handleCardClick(card)}
             >
+              <img src={card.imageSrc} alt={card.title} />
               <h4>{card.title}</h4>
-              <Card.Img variant="top" src={card.imageSrc} />
               <p>{card.text}</p>
+              <BsArrowRightShort size={40} />
             </CardInfo>
           </Col>
         ))}
       </Row>
+
+      {/* Carrusel para dispositivos móviles */}
+      <Carousel className="d-sm-none">
+        {cardsData.map((card) => (
+          <div key={card.id}>
+            <CardInfo onClick={() => handleCardClick(card)}>
+              <img src={card.imageSrc} alt={card.title} />
+              <h4>{card.title}</h4>
+              <p>{card.text}</p>
+              <BsArrowRightShort size={40} />
+            </CardInfo>
+          </div>
+        ))}
+      </Carousel>
 
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
@@ -63,7 +80,6 @@ const Portafolio = () => {
           {selectedCard && (
             <>
               <p>{selectedCard.text}</p>
-             
               {/* Agrega aquí cualquier otra información adicional que desees mostrar en el modal */}
             </>
           )}
