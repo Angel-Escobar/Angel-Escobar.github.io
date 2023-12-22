@@ -18,12 +18,12 @@ const Cover = () => {
   `;
 
   const BotonServicios = styled.button`
-    background-color: transparent;
-    border-color: #FD6003;
-    color: #242E66;
+    background-color: #FD6003;
+    color: white;
     &:hover{
-      color: white;
-      background-color: #FD6003;
+      color: #242E66;
+      border-color: #FD6003;
+      background-color: transparent;
     }
   `;
   const BotontContacto = styled.button`

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './Components/Navbar';
 import Cover from './Components/Cover';
-import Portafolio from './Components/Portafolio'
+import Portafolio from './Components/Services'
 import Footer from './Components/Footer'
 import './Components/CSS/App.css'
 
