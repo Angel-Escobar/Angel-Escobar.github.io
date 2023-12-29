@@ -57,15 +57,21 @@ const Services = () => {
 
     { id: 3, title: 'Fotografía Profesional', 
      text: 'Imagenes que representan cada rasgo del producto',
-     icon: <BsCamera size={60}/> },
+     icon: <BsCamera size={60}/>,
+    modalText: 'Con este paquete fotográfico profesional, obtendrás imágenes de tus productos en un fondo de color sólido o acompañado con elementos reales acorde a tu producto',
+    modalList: ['Recibiremos tus productos', 'Presenttaremos una propuesta', 'Corregiremos la propuesta a tu gusto', 'Entregaremos tus archivos finales', 'Devolveremos tus productos'] },
 
     { id: 4, title: 'Ventas en Redes Sociales ', 
     text: 'Acercate mas a la desicion de compra', 
-    icon: <BsShop size={60}/> },
+    icon: <BsShop size={60}/> ,
+    modalText: 'Nos encargaremos de promocionar tus productos o servicios en las redes sociales de tu marca: Facebook e Instagram, con el objetivo de generar conversaciones con clientes potenciales por medio de Messenger, Instagram y/o WhatsApp, por mensaje directo o comentarios. Buscando conversaciones con nuevos clientes potenciales y llegando a clientes existentes que ya te enviaron mensaje con la intensión de incentivar a una nueva conversación y/o continuar con la existente.',
+    modalList: ['Definiremos tus objetivos (Mensajes o Comentarios)', 'Esableceremos un presupuesto publicitario', 'Gestionaremos los permisos necesarios', 'Crearemos las campañas necesarias', 'Reportaremos los resultados al finalizar cada campaña de prueba', 'Optimizaremos los anuncios de cada campaña ganadora']},
 
     { id: 5, title: 'Ventas de Tienda en Linea ', 
     text: 'Buscamos conversiones con clientes potenciales', 
-    icon: <BsPerson size={60}/> },
+    icon: <BsPerson size={60}/>,
+    modalText: 'Nos encargamos de promocionar tus productos o servicios en las redes sociales de tu marca: Facebook e Instagram, con el objetivo de encontrar personas que estén dispuestas a registrar un pedido o enviar un mensaje a tus redes sociales, por medio de tu página web. Buscando nuevo tráfico de clientes potenciales y llegando a clientes existentes que ya registraron un pedido e incentivar a una nueva conversión.',
+    modalList: ['Definiremos tus objetivos (Mensajes o Comentarios)', 'Esableceremos un presupuesto publicitario', 'Gestionaremos los permisos necesarios', 'Crearemos las campañas necesarias', 'Reportaremos los resultados al finalizar cada campaña de prueba', 'Optimizaremos los anuncios de cada campaña ganadora'] },
 
   ];
 
