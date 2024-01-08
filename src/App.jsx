@@ -5,10 +5,10 @@ import Portafolio from './Components/Services'
 import Footer from './Components/Footer'
 import './Components/CSS/App.css'
 
-
 const App = () => {
   return (
     <div className='contenedor'>
+      
       <NavBar />
       <Cover />
       <Portafolio />

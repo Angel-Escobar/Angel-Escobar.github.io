@@ -1,6 +1,6 @@
-.contenedor {
-    background-image: url('/src/assets/fondo-papel-tapiz-colorido-borroso-artistico.jpg');
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen dentro del contenedor */
-  }
-  
+.contenedor{
+    background-image: url(/src/assets/blurry-gradient-haikei.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
